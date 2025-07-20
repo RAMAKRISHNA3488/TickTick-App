@@ -1,18 +1,20 @@
 # 📆 Recurring Date Picker Component
 
-A reusable and extensible **Recurring Date Picker** built with **Next.js**, **Tailwind CSS**, and **Zustand**, inspired by the recurring task feature in **TickTick**. This component allows users to select flexible recurring patterns with customizable options and a calendar preview.
+A reusable and extensible **Recurring Date Picker** built with **Next.js**, **Tailwind CSS**, and **Zustand**, 
+inspired by the recurring task feature in **TickTick**. This component allows users to select flexible recurring
+patterns with customizable options and a calendar preview.
 
 ## 🚀 Live Demo
 
-[🔗 Cloud IDE Demo (CodeSandbox / Gitpod / StackBlitz)](https://your-cloud-ide-link-here)
+[🔗 Cloud IDE Demo [https://tick-tick-app.vercel.app/]
 
 ## 🎥 Video Walkthrough
 
-[🎥 Loom Video (Code Walkthrough + Face Visible)](https://your-loom-link-here)
+[🎥 Loom Video ]
 
 ## 📁 GitHub Repository
 
-[📦 GitHub Repo](https://github.com/your-username/recurring-date-picker)
+[📦 GitHub Repo](https://github.com/RAMAKRISHNA3488/TickTick-App)
 
 ---
 
@@ -20,10 +22,9 @@ A reusable and extensible **Recurring Date Picker** built with **Next.js**, **Ta
 
 - **Framework:** Next.js (React 18)
 - **Styling:** Tailwind CSS
-- **State Management:** Zustand
 - **Components:** Radix UI + Custom Components
 - **Testing:** Jest + React Testing Library
-- **Development Environment:** Gitpod / CodeSandbox / StackBlitz
+- **Development Environment:** Vercel
 
 ---
 
@@ -50,8 +51,4 @@ A reusable and extensible **Recurring Date Picker** built with **Next.js**, **Ta
 ### 💡 Reusability
 - Clean, modular, and composable components
 - Easy to extend or embed into other applications
-
----
-
-## 📂 Folder Structure
 
