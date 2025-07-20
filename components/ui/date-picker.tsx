@@ -109,7 +109,9 @@ export function DatePicker({
           {/* Month & Year Selector */}
           <div className="flex gap-2">
             <Select
-              onValueChange={(month) => setStartDate(setMonth(startDate, months.indexOf(month)))}
+              onValueChange={(month) =>
+                setStartDate(setMonth(startDate, months.indexOf(month)))
+              }
               value={months[getMonth(startDate)]}
             >
               <SelectTrigger className="w-[110px]">
@@ -124,7 +126,9 @@ export function DatePicker({
               </SelectContent>
             </Select>
             <Select
-              onValueChange={(year) => setStartDate(setYear(startDate, parseInt(year)))}
+              onValueChange={(year) =>
+                setStartDate(setYear(startDate, parseInt(year)))
+              }
               value={getYear(startDate).toString()}
             >
               <SelectTrigger className="w-[110px]">
@@ -144,10 +148,14 @@ export function DatePicker({
           <Calendar
             mode="single"
             selected={startDate}
-            onSelect={setStartDate}
+            onSelect={(date) => {
+              if (date) setStartDate(date)
+            }}
             initialFocus
             month={startDate}
-            onMonthChange={setStartDate}
+            onMonthChange={(date) => {
+              if (date) setStartDate(date)
+            }}
           />
 
           {/* Optional End Date */}
@@ -155,10 +163,12 @@ export function DatePicker({
           <Calendar
             mode="single"
             selected={endDate}
-            onSelect={setEndDate}
+            onSelect={(date) => setEndDate(date)}
             initialFocus
             month={endDate || startDate}
-            onMonthChange={(date) => setEndDate(date)}
+            onMonthChange={(date) => {
+              if (date) setEndDate(date)
+            }}
           />
         </PopoverContent>
       </Popover>
@@ -167,7 +177,9 @@ export function DatePicker({
       <div className="flex gap-2">
         <Select
           value={recurrence}
-          onValueChange={(value: "daily" | "weekly" | "monthly" | "yearly") => setRecurrence(value)}
+          onValueChange={(value: "daily" | "weekly" | "monthly" | "yearly") =>
+            setRecurrence(value)
+          }
         >
           <SelectTrigger className="w-[150px]">
             <SelectValue placeholder="Recurrence" />
@@ -199,7 +211,9 @@ export function DatePicker({
                 checked={selectedWeekdays.includes(day)}
                 onChange={() =>
                   setSelectedWeekdays((prev) =>
-                    prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
+                    prev.includes(day)
+                      ? prev.filter((d) => d !== day)
+                      : [...prev, day]
                   )
                 }
               />
@@ -211,7 +225,9 @@ export function DatePicker({
 
       {/* Preview of Recurring Dates */}
       <div className="mt-4">
-        <label className="text-sm font-semibold mb-2 block">Recurring Dates Preview:</label>
+        <label className="text-sm font-semibold mb-2 block">
+          Recurring Dates Preview:
+        </label>
         <Calendar
           mode="multiple"
           selected={recurringDates}
