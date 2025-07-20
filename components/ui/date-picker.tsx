@@ -165,7 +165,10 @@ export function DatePicker({
 
       {/* Recurrence Options */}
       <div className="flex gap-2">
-        <Select value={recurrence} onValueChange={(value) => setRecurrence(value as any)}>
+        <Select
+          value={recurrence}
+          onValueChange={(value: "daily" | "weekly" | "monthly" | "yearly") => setRecurrence(value)}
+        >
           <SelectTrigger className="w-[150px]">
             <SelectValue placeholder="Recurrence" />
           </SelectTrigger>
